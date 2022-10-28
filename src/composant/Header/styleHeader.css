@@ -1,0 +1,20 @@
+header {
+    height: min-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #020F4F;
+    /* #FB9D4B #AB92BF*/
+    color: #f4d35e;
+}
+
+header div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+header img {
+    height: 100px;
+}

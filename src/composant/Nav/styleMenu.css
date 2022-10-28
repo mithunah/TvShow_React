@@ -1,0 +1,15 @@
+ul {
+    list-style-type: none;
+}
+
+ul li {
+    display: inline;
+    margin: 0 25px;
+    font-family: Monaco, monospace;
+}
+
+li a {
+    color: #f4d35e;
+    text-decoration: none;
+    font-size: 20px;
+}

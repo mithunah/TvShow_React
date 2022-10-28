@@ -3,11 +3,35 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import DetailsSerie from './pages/DetailsSerie';
+import DetailsSeason from './pages/DetailsSeason';
+import RandomSuggestion from './pages/RandomSuggestion';
+
+const router = createBrowserRouter ([
+  {
+    path:"/",
+    element: <App />
+  },
+  {
+    path:"serie/:serieID",
+    element: <DetailsSerie />
+  },
+  {
+    path:"season/:serieID",
+    element: <DetailsSeason />
+  },
+  {
+    path:"suggestion",
+    element: <RandomSuggestion />
+  },
+]);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <RouterProvider router={router} />
+
   </React.StrictMode>
 );
 

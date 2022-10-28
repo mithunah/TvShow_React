@@ -1,0 +1,13 @@
+.drop {
+    display: flex;
+    justify-content: center;
+    margin: 30px auto;
+    width: 80%;
+    border: 2px solid #AB92BF;
+    border-radius: 7px;
+}
+
+.contentDrop,
+.imgDrop {
+    margin: 20px;
+}
