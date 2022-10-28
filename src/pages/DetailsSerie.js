@@ -12,17 +12,15 @@ function DetailsSerie() {
     let img = 'https://via.placeholder.com/300x400';
     const { serieID } = useParams();
 
-    const fetchSuggestion = async () => {
-        const response = await fetch(`https://api.tvmaze.com/shows/${serieID}`);
-        const info = await response.json();
-        setDetails(info);
-        setLoading(false);
-    }
-
     useEffect(() => {
+        const fetchSuggestion = async () => {
+            const response = await fetch(`https://api.tvmaze.com/shows/${serieID}`);
+            const info = await response.json();
+            setDetails(info);
+            setLoading(false);
+        }
         fetchSuggestion();
     }, []);
-
 
     return (
         <>
@@ -30,15 +28,16 @@ function DetailsSerie() {
             {loading &&
                 <Title>Informations are on their way...</Title>
             }
-            {!loading &&
-                <DetailSerie
+            {!loading && 
+            <DetailSerie
                     title={details.name}
                     summary={details.summary}
                     image={details.image.medium || img}
+                    genre={details.genres}
                 >
                     Language: {details.language} <br /> Rating: {details.rating.average}
                 </DetailSerie>
-
+            
             }
 
             <Footer />

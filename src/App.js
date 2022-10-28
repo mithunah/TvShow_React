@@ -6,8 +6,6 @@ import { useEffect, useState } from 'react';
 import Title from './composant/Title/Title';
 
 
-
-
 function App() {
 
   const [infoSerie, setInfoSerie] = useState([]);
@@ -31,16 +29,15 @@ function App() {
   return (
     <div className="App">
       <Header />
-      <Title taille="50px">Des titres pour Halloween</Title>
+      <Title taille="50px">Some Shows for Halloween</Title>
       {loading &&
-        <Title>Les données arrivent...</Title>
+        <Title>Informations on their way...</Title>
       }
       <div className='cards'>
         
           {infoSerie && infoSerie.map((serie, index) =>
-            <div className='acard'>
+            <div className='acard' key={index} >
               <Card 
-              key={index} 
               image={serie.show.image === null ? 'https://via.placeholder.com/300x400' : serie.show.image.medium} 
               title={serie.show.name} 
               premiere={serie.show.premiered} 

@@ -27,7 +27,6 @@ function RandomSuggestion() {
     fetchSuggestion();
   }, []);
 
-
   return (
     <>
       <Header />
@@ -43,7 +42,7 @@ function RandomSuggestion() {
         ></DetailSerie>
       }
       {!loading && choice._embedded.seasons.map((season, index) =>
-        <ToggleButton summary={season.summary} episodeNb={season.episodeOrder}>Season {season.number}</ToggleButton>
+        <ToggleButton key={index} summary={season.summary} episodeNb={season.episodeOrder}>Season {season.number}</ToggleButton>
       )
       }
 

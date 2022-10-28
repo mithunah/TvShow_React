@@ -1,7 +1,7 @@
 import React from 'react'
 import './styleFooter.css'
 
-const Footer = ({ }) => {
+const Footer = () => {
     return (
         <footer>
             <p><a href='https://www.tvmaze.com/api'>API TV Maze</a></p>

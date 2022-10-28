@@ -6,6 +6,7 @@ import reportWebVitals from './reportWebVitals';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import DetailsSerie from './pages/DetailsSerie';
 import RandomSuggestion from './pages/RandomSuggestion';
+import SearchResult from './pages/SearchResult';
 
 const router = createBrowserRouter ([
   {
@@ -19,6 +20,10 @@ const router = createBrowserRouter ([
   {
     path:"suggestion",
     element: <RandomSuggestion />
+  },
+  {
+    path:"search/:searched",
+    element: <SearchResult />
   },
 ]);
 

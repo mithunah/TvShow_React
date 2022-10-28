@@ -11,3 +11,9 @@
 .imgDrop {
     margin: 20px;
 }
+
+.genre{
+    display: flex;
+    flex-direction: row;
+    color: darkblue;
+}

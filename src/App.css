@@ -6,13 +6,3 @@
   color: brown;
 }
 
-.cards{
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  margin: 20px 30px;
-}
-
-.acard{
-  margin: auto;
-}

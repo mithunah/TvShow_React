@@ -2,8 +2,9 @@ import React from 'react';
 import './styleHeader.css';
 import Title from '../Title/Title'
 import Nav from '../Nav/Nav';
+import SearchBar from '../SearchBar/Search';
 
-const Header = ({ }) => {
+const Header = () => {
     return (
         <header className='header'>
             <div>
@@ -12,6 +13,9 @@ const Header = ({ }) => {
             </div>
             <div>
                 <Nav />
+            </div>
+            <div>
+                <SearchBar />
             </div>
         </header>
     )

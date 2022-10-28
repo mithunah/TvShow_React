@@ -9,7 +9,7 @@ header {
     color: #f4d35e;
 }
 
-header div {
+header div{
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -17,4 +17,8 @@ header div {
 
 header img {
     height: 100px;
+}
+
+.searchBar {
+    float: right;
 }
