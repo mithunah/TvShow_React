@@ -15,7 +15,8 @@ Default.args = {
     taille: 12,
 }
 
-titre.args = {
+export const Titre = Template.bind({});
+Titre.args = {
     children: 'Les Séries',
     taille: 60,
 }

@@ -3,7 +3,7 @@ import './styleMenu.css';
 import { Link } from 'react-router-dom';
 
 
-const Nav = ({ first = "All", second = "Random Suggestion" }) => {
+const Nav = ({ first = "Home", second = "Random Suggestion" }) => {
 
   return (
     <>

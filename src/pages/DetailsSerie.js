@@ -13,10 +13,8 @@ function DetailsSerie() {
     const { serieID } = useParams();
 
     const fetchSuggestion = async () => {
-        //44778
         const response = await fetch(`https://api.tvmaze.com/shows/${serieID}`);
         const info = await response.json();
-        //console.log(info);
         setDetails(info);
         setLoading(false);
     }
@@ -26,13 +24,11 @@ function DetailsSerie() {
     }, []);
 
 
-    console.log(details);
-
     return (
         <>
             <Header />
             {loading &&
-                <Title>Les données arrivent...</Title>
+                <Title>Informations are on their way...</Title>
             }
             {!loading &&
                 <DetailSerie
@@ -40,15 +36,10 @@ function DetailsSerie() {
                     summary={details.summary}
                     image={details.image.medium || img}
                 >
-                    Langue: {details.language} <br /> Note: {details.rating.average}
+                    Language: {details.language} <br /> Rating: {details.rating.average}
                 </DetailSerie>
 
             }
-
-            {/* {!loading && choice._embedded.seasons.map((season, index)=> 
-        <ToggleButton summary={season.summary} episodeNb={season.episodeOrder}>Saison {season.number}</ToggleButton>
-        )
-        } */}
 
             <Footer />
         </>

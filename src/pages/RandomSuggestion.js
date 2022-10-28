@@ -13,7 +13,6 @@ function RandomSuggestion() {
   let img = 'https://via.placeholder.com/300x400';
 
   const fetchSuggestion = async () => {
-    //44778
     let id = Math.floor(Math.random() * 440);
     console.log(id);
     const response = await fetch(`https://api.tvmaze.com/shows/${id}?embed[]=seasons`);
@@ -29,14 +28,12 @@ function RandomSuggestion() {
   }, []);
 
 
-  console.log(choice);
-
   return (
     <>
       <Header />
-      <Button event={fetchSuggestion}>Nouvelle Suggestion</Button>
+      <Button event={fetchSuggestion}>New Suggestion</Button>
       {loading &&
-        <Title>Les données arrivent...</Title>
+        <Title>Informations are on their way...</Title>
       }
       {choice.image !== undefined &&
         <DetailSerie
@@ -46,7 +43,7 @@ function RandomSuggestion() {
         ></DetailSerie>
       }
       {!loading && choice._embedded.seasons.map((season, index) =>
-        <ToggleButton summary={season.summary} episodeNb={season.episodeOrder}>Saison {season.number}</ToggleButton>
+        <ToggleButton summary={season.summary} episodeNb={season.episodeOrder}>Season {season.number}</ToggleButton>
       )
       }
 

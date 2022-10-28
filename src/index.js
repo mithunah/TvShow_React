@@ -5,7 +5,6 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import DetailsSerie from './pages/DetailsSerie';
-import DetailsSeason from './pages/DetailsSeason';
 import RandomSuggestion from './pages/RandomSuggestion';
 
 const router = createBrowserRouter ([
@@ -16,10 +15,6 @@ const router = createBrowserRouter ([
   {
     path:"serie/:serieID",
     element: <DetailsSerie />
-  },
-  {
-    path:"season/:serieID",
-    element: <DetailsSeason />
   },
   {
     path:"suggestion",

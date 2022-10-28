@@ -8,7 +8,7 @@ const Header = ({ }) => {
         <header className='header'>
             <div>
                 <img src="/tv-show.png" alt="logo" />
-                <Title taille="70px" >All About Your Favorite Shows</Title>
+                <Title taille="70px" >Shows Suggestion</Title>
             </div>
             <div>
                 <Nav />

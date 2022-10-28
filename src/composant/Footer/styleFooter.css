@@ -7,3 +7,7 @@ footer {
     color: #f4d35e;
     margin-top: 30px;
 }
+
+footer a {
+    margin: 0 20px;
+}

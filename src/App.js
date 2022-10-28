@@ -15,11 +15,9 @@ function App() {
 
   const fetchSerie = async () => {
     setLoading(true);
-    //https://api.tvmaze.com/shows/25499?embed[]=seasons
-    //https://api.tvmaze.com/search/shows?q=las%20chicas%20del
     const response = await fetch(`https://api.tvmaze.com/search/shows?q=The%20Haunting%20of`);
     const info = await response.json();
-    //console.log(info);
+
     setInfoSerie(info);
     setLoading(false);
   }
@@ -29,7 +27,6 @@ function App() {
     fetchSerie();
   }, [])
 
-  console.log(infoSerie);
 
   return (
     <div className="App">

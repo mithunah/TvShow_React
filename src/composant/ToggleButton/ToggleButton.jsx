@@ -16,7 +16,7 @@ const ToggleButton = ({ children, summary, episodeNb }) => {
             </button>
             {shown &&
                 <section className='toggleSeason'>
-                    <Text weight='bold'>Nombre d'épisode: {episodeNb}</Text>
+                    <Text weight='bold'>Number of episodes: {episodeNb}</Text>
                     <Summary content={summary}></Summary>
                 </section>
             }

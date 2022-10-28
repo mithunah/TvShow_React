@@ -15,6 +15,8 @@ Default.args = {
     weight: "light"
 }
 
+export const Bold = Template.bind({});
+
 Bold.args = {
     content: 'Hola',
     weight: "bolder"
